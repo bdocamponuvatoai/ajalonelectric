@@ -133,6 +133,44 @@ planner errors (1280, 390), generator step with a preset (1024), review step
   `Inter, sans-serif`, Arial is now listed too. That only matters if the
   bundled fonts fail to load.
 
+## Live preview (Vercel)
+
+Checked 29 October 2026 against <https://ajalonelectric.vercel.app/>
+(commit `5a9dc4d`, `SITE_INDEXABLE` unset).
+
+- All 12 routes return 200; unknown paths (`/does-not-exist/`,
+  `/services/nope/`) return 404 with the site's 404 page.
+- Every page sends `X-Content-Type-Options`, `Referrer-Policy`,
+  `X-Frame-Options`, `Permissions-Policy` and `Strict-Transport-Security`.
+  The platform's trailing-slash redirect (`/about` → 308 `/about/`) carries
+  only HSTS.
+- `robots.txt` disallows all crawling, pages carry `noindex, nofollow`, and
+  canonical URLs and the sitemap use `https://ajalonelectric.vercel.app`.
+- Clicking around and loading every route: 0 error responses across 319
+  link-prefetch requests. Prefetches cancelled when links scroll out of view
+  show as `ERR_ABORTED`; none received a 4xx.
+
+### Lighthouse
+
+Lighthouse 13.6.0, mobile preset (412 × 823 at 1.75×, simulated slow 4G, 4×
+CPU slowdown), headless Chrome 156 on Windows, 3 runs per page, Vercel
+Singapore edge.
+
+| Page        | Performance | Accessibility | Best practices | SEO | LCP         | Weight    |
+| ----------- | ----------- | ------------- | -------------- | --- | ----------- | --------- |
+| `/`         | 76–86       | 96            | 100            | 69  | 3.89–6.60 s | 1,607 KiB |
+| `/request/` | 95–98       | 97            | 100            | 69  | 0.91–0.94 s | 260 KiB   |
+
+- SEO 69: the only failing audit is "Page is blocked from indexing" (intended
+  while the preview is `noindex`).
+- Home LCP is the hero photo. At 412 px × 1.75 the browser needs 721 px, so it
+  skips the 720 px variants and loads the 1536 px files; Lighthouse estimates
+  1,042 KiB of image savings. A ~1080 px variant would fix this.
+- Accessibility: only `color-contrast` fails (4.15–4.49:1 on small orange and
+  grey labels); fixing it changes the design and needs owner approval. The
+  brand link's `label-content-name-mismatch` was fixed in `5a9dc4d` with no
+  pixel change.
+
 ## Not covered
 
 Real iOS and Android devices, Safari and Firefox were not tested. Mobile
