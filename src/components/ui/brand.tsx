@@ -13,8 +13,14 @@ export function Brand() {
         loading="eager"
         unoptimized
       />
+      {/*
+        The space before the block-level <small> collapses at the line end, so
+        it changes nothing on screen but makes the visible text "AJALON
+        ELECTRIC", which matches the accessible name.
+      */}
       <span>
-        AJALON<small>ELECTRIC</small>
+        {"AJALON "}
+        <small>ELECTRIC</small>
       </span>
     </Link>
   );

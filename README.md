@@ -170,4 +170,8 @@ against Next's inline scripts.
 
 ### Deployments
 
-- Preview: _not deployed yet_
+- Preview: <https://ajalonelectric.vercel.app/> (Vercel; `SITE_INDEXABLE`
+  unset, so every page is `noindex, nofollow` and `robots.txt` disallows all
+  crawling).
+- Production: not launched. Needs owner approval, the real domain in
+  `SITE_URL`, and `SITE_INDEXABLE=true` on the production environment only.
