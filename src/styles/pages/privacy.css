@@ -1,0 +1,24 @@
+.prose {
+  max-width: 900px;
+}
+.prose h2 {
+  font-size: 32px;
+  margin-top: 50px;
+  letter-spacing: -1px;
+}
+.prose h2:first-child {
+  margin-top: 0;
+}
+.prose p {
+  font-size: 15px;
+  line-height: 1.95;
+}
+@media (max-width: 740px) {
+  .prose h2 {
+    font-size: 28px;
+  }
+  .prose p {
+    font-size: 13px;
+    line-height: 1.9;
+  }
+}

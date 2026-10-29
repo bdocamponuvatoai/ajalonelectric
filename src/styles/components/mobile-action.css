@@ -1,0 +1,37 @@
+.mobile-action {
+  display: none;
+}
+@media (max-width: 740px) {
+  .mobile-action {
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 90;
+    background: #f8f7f3f5;
+    backdrop-filter: blur(12px);
+    padding: 10px 20px max(10px, env(safe-area-inset-bottom));
+    gap: 12px;
+    border-top: 1px solid var(--line);
+  }
+  .mobile-action .button {
+    flex: 1;
+    justify-content: center;
+    gap: 45px;
+    font-size: 11px;
+    min-height: 44px;
+    padding-block: 11px;
+  }
+  .mobile-action > a:last-child {
+    display: grid;
+    place-items: center;
+    width: 44px;
+    border: 1px solid #a9b8b7;
+    border-radius: 5px;
+  }
+  .mobile-action > a:last-child svg {
+    width: 19px;
+    height: 19px;
+  }
+}

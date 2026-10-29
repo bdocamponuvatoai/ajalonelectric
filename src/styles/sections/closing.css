@@ -1,0 +1,126 @@
+.closing {
+  background: #eaded0;
+  padding: 65px 70px;
+  border-radius: 8px;
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 80px;
+  align-items: center;
+  margin-bottom: 100px;
+  position: relative;
+  overflow: hidden;
+}
+.closing h2 {
+  font-size: 58px;
+  line-height: 1.12;
+  position: relative;
+  z-index: 1;
+}
+.closing h2 span {
+  color: #965035;
+}
+.closing .eyebrow {
+  font-size: 8px;
+  letter-spacing: 1.6px;
+}
+.closing > div:nth-child(2) {
+  position: relative;
+  z-index: 1;
+}
+.closing p {
+  font-size: 13px;
+  margin: 0;
+  max-width: 280px;
+  color: #5c615b;
+}
+.closing .button {
+  margin-top: 25px;
+  background: var(--navy);
+  border-color: var(--navy);
+  color: white;
+  font-size: 11px;
+}
+.closing .button:hover {
+  background: #2b4857;
+}
+.closing-phone {
+  display: block;
+  font-size: 12px;
+  margin-top: 18px;
+}
+.closing-bolt {
+  position: absolute;
+  right: 22px;
+  bottom: -90px;
+  color: #c7ad9640;
+  transform: rotate(10deg);
+}
+.closing-bolt svg {
+  height: 420px;
+  width: 250px;
+  stroke-width: 0.7;
+}
+@media (max-width: 1200px) {
+  .closing {
+    gap: 55px;
+    padding: 55px;
+  }
+  .closing h2 {
+    font-size: 50px;
+  }
+}
+@media (max-width: 1000px) {
+  .closing {
+    padding: 45px;
+    gap: 45px;
+  }
+  .closing h2 {
+    font-size: 44px;
+  }
+  .closing p {
+    font-size: 12px;
+  }
+}
+@media (max-width: 740px) {
+  .closing {
+    grid-template-columns: 1fr;
+    padding: 35px 28px;
+    gap: 28px;
+    margin-bottom: 60px;
+    border-radius: 6px;
+  }
+  .closing h2 {
+    font-size: 40px;
+    letter-spacing: -1.8px;
+  }
+  .closing .eyebrow {
+    font-size: 7px;
+    letter-spacing: 1.3px;
+  }
+  .closing p {
+    font-size: 13px;
+    max-width: 330px;
+  }
+  .closing .button {
+    margin-top: 20px;
+  }
+  .closing-bolt {
+    right: -50px;
+    bottom: -65px;
+  }
+  .closing-bolt svg {
+    width: 200px;
+    height: 310px;
+  }
+}
+@media (max-width: 380px) {
+  .closing {
+    padding: 32px 24px;
+  }
+  .closing h2 {
+    font-size: 35px;
+  }
+  .closing .eyebrow {
+    font-size: 6.5px;
+  }
+}

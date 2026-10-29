@@ -1,0 +1,79 @@
+.service-finder {
+  background: #e9ede5;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  padding: 55px;
+  margin-bottom: 100px;
+  border-radius: 8px;
+}
+.service-finder h2 {
+  font-size: 48px;
+}
+.service-finder h2 em {
+  color: #71806c;
+}
+.finder-options > button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: none;
+  border: 0;
+  border-bottom: 1px solid #c8d2c8;
+  padding: 22px 0;
+  width: 100%;
+  text-align: left;
+  font-size: 13px;
+}
+.finder-options > button:hover,
+.finder-options > button[aria-pressed="true"] {
+  color: var(--orange);
+}
+.finder-options > button svg {
+  width: 18px;
+  height: 18px;
+}
+#finder-result {
+  background: #fbfcf6;
+  padding: 25px;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+#finder-result h3 {
+  font-size: 24px;
+}
+#finder-result p {
+  font-size: 13px;
+  margin-top: 15px;
+}
+#finder-result .text-link {
+  font-size: 11px;
+}
+@media (max-width: 1000px) {
+  .service-finder {
+    padding: 40px;
+    gap: 50px;
+  }
+  .service-finder h2 {
+    font-size: 42px;
+  }
+  .finder-options > button {
+    font-size: 12px;
+  }
+}
+@media (max-width: 740px) {
+  .service-finder {
+    grid-template-columns: 1fr;
+    padding: 30px 24px;
+    gap: 20px;
+    margin-bottom: 60px;
+  }
+  .service-finder h2 {
+    font-size: 37px;
+  }
+  .finder-options > button {
+    font-size: 12px;
+    padding: 20px 0;
+  }
+}

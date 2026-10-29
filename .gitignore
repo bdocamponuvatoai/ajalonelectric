@@ -1,0 +1,20 @@
+# dependencies
+node_modules/
+
+# Next.js build output
+.next/
+out/
+next-env.d.ts
+*.tsbuildinfo
+
+# environment (keep the documented template)
+.env*
+!.env.example
+
+# Vercel
+.vercel
+
+# logs and OS files
+*.log
+.DS_Store
+Thumbs.db

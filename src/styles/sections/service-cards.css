@@ -1,0 +1,126 @@
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+.service-photo {
+  display: block;
+  position: relative;
+  overflow: hidden;
+  border-radius: 6px;
+  aspect-ratio: 1.15;
+}
+.service-photo img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+}
+.service-photo:hover img {
+  transform: scale(1.04);
+}
+.image-arrow {
+  position: absolute;
+  right: 18px;
+  bottom: 18px;
+  width: 38px;
+  height: 38px;
+  background: var(--paper);
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+}
+.image-arrow svg {
+  width: 18px;
+  height: 18px;
+}
+.service-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin-top: 27px;
+}
+.service-meta .eyebrow {
+  font-size: 8px;
+  letter-spacing: 1.5px;
+  margin: 0;
+}
+.service-meta > svg {
+  width: 20px;
+  height: 20px;
+  color: var(--orange);
+}
+.service-card h3 {
+  font-size: 31px;
+  margin-top: 16px;
+  letter-spacing: -1.2px;
+  line-height: 1.2;
+}
+.service-card p {
+  font-size: 13px;
+  line-height: 1.8;
+  margin-top: 18px;
+  max-width: 340px;
+}
+.service-card > .text-link {
+  margin-top: 18px;
+  font-size: 11px;
+}
+@media (max-width: 1200px) {
+  .service-card h3 {
+    font-size: 28px;
+  }
+  .service-grid {
+    gap: 25px;
+  }
+}
+@media (max-width: 1000px) {
+  .service-meta .eyebrow {
+    font-size: 7px;
+    letter-spacing: 1px;
+  }
+  .service-card h3 {
+    font-size: 25px;
+  }
+  .service-card p {
+    font-size: 12px;
+  }
+  .service-grid {
+    gap: 22px;
+  }
+  .service-card > .text-link {
+    font-size: 10px;
+    gap: 20px;
+  }
+}
+@media (max-width: 740px) {
+  .service-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .service-photo {
+    aspect-ratio: 1.25;
+  }
+  .service-meta {
+    margin-top: 22px;
+  }
+  .service-meta .eyebrow {
+    font-size: 8px;
+    letter-spacing: 1.4px;
+  }
+  .service-card h3 {
+    font-size: 32px;
+    letter-spacing: -1.2px;
+    margin-top: 14px;
+  }
+  .service-card p {
+    font-size: 13px;
+    max-width: 100%;
+    margin-top: 16px;
+  }
+  .service-card > .text-link {
+    font-size: 11px;
+    gap: 40px;
+    margin-top: 17px;
+  }
+}

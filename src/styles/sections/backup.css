@@ -1,0 +1,298 @@
+.backup-section {
+  background: var(--pale);
+  padding-block: 100px;
+}
+.backup-layout {
+  display: grid;
+  grid-template-columns: 0.95fr 1.05fr;
+  gap: 100px;
+  align-items: center;
+}
+.backup-copy .eyebrow {
+  font-size: 9px;
+  max-width: 330px;
+}
+.backup-copy h2 {
+  font-size: clamp(40px, 4.5vw, 64px);
+  line-height: 1.08;
+  letter-spacing: -3px;
+}
+.backup-copy h2 em {
+  color: #6b7967;
+}
+.backup-copy > p {
+  font-size: 14px;
+  max-width: 390px;
+  line-height: 1.9;
+  margin-top: 24px;
+}
+.backup-copy > .text-link {
+  font-size: 11px;
+}
+.backup-image {
+  width: 220px;
+  height: 130px;
+  margin-top: 32px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.backup-image img {
+  width: 100%;
+  height: 100%;
+}
+.priority-tool {
+  background: var(--white);
+  padding: 38px;
+  border: 1px solid #dce0d8;
+  border-radius: 8px;
+  box-shadow: 0 15px 45px #293c3010;
+}
+.priority-tool > .eyebrow {
+  font-size: 8px;
+  letter-spacing: 1.5px;
+  color: #6d7973;
+  margin-bottom: 16px;
+}
+.priority-tool h3 {
+  font-size: 28px;
+  letter-spacing: -1px;
+  line-height: 1.25;
+}
+.priority-tool > p:not(.fine) {
+  font-size: 12px;
+  margin-top: 12px;
+}
+.priority-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-top: 26px;
+}
+.priority-grid > label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #f8f8f3;
+  border: 1px solid #dce0d7;
+  padding: 18px 14px;
+  min-height: 84px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.2s;
+}
+.priority-grid input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+.priority-grid label:has(input:focus-visible) {
+  outline: 3px solid var(--orange);
+  outline-offset: 3px;
+}
+.priority-grid label:has(input:checked) {
+  background: #ffefe5;
+  border-color: #e9aa8f;
+}
+.priority-icon {
+  display: flex;
+  color: #566e69;
+}
+.priority-icon svg {
+  width: 24px;
+  height: 24px;
+}
+.priority-grid label > span:nth-of-type(2) {
+  font-size: 11px;
+  line-height: 1.5;
+  max-width: 90px;
+}
+.priority-check {
+  position: absolute;
+  right: 8px;
+  top: 6px;
+  display: none;
+  color: var(--orange);
+}
+.priority-check svg {
+  width: 12px;
+  height: 12px;
+}
+.priority-grid input:checked ~ .priority-check {
+  display: block;
+}
+.priority-bottom {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  justify-content: space-between;
+  margin-top: 26px;
+}
+.priority-bottom p {
+  font-size: 10px;
+  margin: 0;
+  max-width: 125px;
+}
+.priority-bottom .button {
+  font-size: 10px;
+  padding: 13px 16px;
+  gap: 15px;
+  flex-shrink: 0;
+}
+.priority-tool > .fine {
+  font-size: 10px;
+  margin-top: 23px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  line-height: 1.8;
+}
+@media (max-width: 1200px) {
+  .backup-layout {
+    gap: 60px;
+  }
+  .priority-tool {
+    padding: 29px;
+  }
+  .priority-grid > label {
+    gap: 9px;
+    padding: 16px 11px;
+  }
+  .priority-icon svg {
+    width: 21px;
+    height: 21px;
+  }
+  .priority-grid label > span:nth-of-type(2) {
+    font-size: 10px;
+  }
+  .priority-bottom {
+    gap: 12px;
+  }
+  .priority-bottom .button {
+    padding: 13px;
+    font-size: 9px;
+    gap: 10px;
+  }
+}
+@media (max-width: 1000px) {
+  .backup-layout {
+    gap: 35px;
+    grid-template-columns: 0.85fr 1.15fr;
+  }
+  .backup-copy h2 {
+    font-size: 47px;
+  }
+  .backup-copy > p {
+    font-size: 13px;
+  }
+  .priority-tool {
+    padding: 26px;
+  }
+  .priority-tool h3 {
+    font-size: 25px;
+  }
+  .priority-grid {
+    gap: 10px;
+  }
+  .priority-grid > label {
+    min-height: 80px;
+  }
+  .priority-bottom {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .priority-bottom p {
+    max-width: none;
+  }
+  .priority-bottom .button {
+    width: 100%;
+    font-size: 11px;
+  }
+}
+@media (max-width: 740px) {
+  .backup-section {
+    padding-block: 60px;
+  }
+  .backup-layout {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+  .backup-copy h2 {
+    font-size: 45px;
+    letter-spacing: -2px;
+  }
+  .backup-copy > p {
+    font-size: 13px;
+    max-width: 440px;
+  }
+  .backup-image {
+    display: none;
+  }
+  .priority-tool {
+    padding: 25px 22px;
+  }
+  .priority-tool h3 {
+    font-size: 27px;
+    letter-spacing: -1px;
+  }
+  .priority-tool > .eyebrow {
+    font-size: 8px;
+  }
+  .priority-grid {
+    gap: 10px;
+  }
+  .priority-grid > label {
+    padding: 17px 12px;
+    gap: 10px;
+    min-height: 82px;
+  }
+  .priority-grid label > span:nth-of-type(2) {
+    font-size: 11px;
+  }
+  .priority-icon svg {
+    width: 22px;
+    height: 22px;
+  }
+  .priority-bottom {
+    gap: 15px;
+  }
+  .priority-bottom p {
+    font-size: 11px;
+  }
+  .priority-bottom .button {
+    font-size: 11px;
+  }
+  .priority-tool > .fine {
+    font-size: 11px;
+    margin-top: 20px;
+  }
+}
+@media (max-width: 380px) {
+  .backup-copy h2 {
+    font-size: 40px;
+  }
+  .priority-tool {
+    padding: 23px 18px;
+  }
+  .priority-tool h3 {
+    font-size: 24px;
+  }
+  .priority-grid {
+    gap: 8px;
+  }
+  .priority-grid label > span:nth-of-type(2) {
+    font-size: 9px;
+  }
+  .priority-grid > label {
+    padding: 16px 9px;
+    gap: 8px;
+    min-height: 78px;
+  }
+  .priority-icon svg {
+    width: 19px;
+    height: 19px;
+  }
+}

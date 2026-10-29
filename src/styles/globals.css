@@ -1,0 +1,27 @@
+/*
+ * Import order matters: partials follow the order in which their rules first
+ * appeared in the original stylesheet, and each partial keeps its base rules
+ * before its media queries. Reordering imports can change the cascade.
+ */
+@import "./base/tokens.css";
+@import "./base/base.css";
+@import "./components/buttons.css";
+@import "./components/header.css";
+@import "./sections/hero.css";
+@import "./sections/intro-strip.css";
+@import "./sections/service-cards.css";
+@import "./sections/backup.css";
+@import "./sections/process.css";
+@import "./sections/solar-feature.css";
+@import "./sections/faq.css";
+@import "./sections/closing.css";
+@import "./components/footer.css";
+@import "./components/mobile-action.css";
+@import "./sections/page-intro.css";
+@import "./pages/services.css";
+@import "./pages/service-detail.css";
+@import "./pages/about.css";
+@import "./pages/project-guide.css";
+@import "./pages/contact.css";
+@import "./pages/privacy.css";
+@import "./pages/request.css";

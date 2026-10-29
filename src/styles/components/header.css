@@ -1,0 +1,195 @@
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 15px;
+  z-index: 200;
+  padding: 10px;
+  background: white;
+}
+.skip-link:focus {
+  top: 10px;
+}
+.topbar {
+  background: #eaece6;
+  height: 34px;
+  font-size: 10px;
+  letter-spacing: 0.2px;
+}
+.topbar > .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+.topbar span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+.topbar svg {
+  width: 12px;
+  height: 12px;
+}
+.topbar a {
+  font-size: 10px;
+}
+header {
+  background: #f8f7f3f5;
+  backdrop-filter: blur(14px);
+  position: sticky;
+  top: 0;
+  z-index: 80;
+  border-bottom: 1px solid #e0e1d880;
+}
+.nav-shell {
+  height: 96px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+.brand img {
+  width: 42px;
+  height: 42px;
+}
+.brand > span {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 23px;
+  line-height: 1;
+  letter-spacing: 2px;
+}
+.brand small {
+  display: block;
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  margin-top: 8px;
+}
+.desktop-nav {
+  display: flex;
+  gap: 29px;
+  align-items: center;
+  margin-left: auto;
+  font-size: 12px;
+  white-space: nowrap;
+}
+.desktop-nav > a {
+  border-bottom: 1px solid transparent;
+  padding: 12px 0;
+}
+.desktop-nav > a:hover,
+.desktop-nav > a[aria-current] {
+  border-color: var(--orange);
+}
+.header-cta {
+  flex-shrink: 0;
+}
+.menu-toggle {
+  display: none;
+  width: 42px;
+  height: 42px;
+  background: none;
+  border: 1px solid var(--line);
+  border-radius: 5px;
+  padding: 9px;
+}
+.menu-toggle > span {
+  height: 1px;
+  background: var(--ink);
+  display: block;
+  margin: 6px 0;
+}
+.mobile-menu {
+  padding: 20px 24px;
+  border-top: 1px solid var(--line);
+  max-height: calc(100dvh - 90px);
+  overflow: auto;
+}
+.mobile-menu > a {
+  display: block;
+  padding: 14px 0;
+}
+.mobile-menu > .button {
+  display: flex;
+  padding: 16px 20px;
+  margin-top: 15px;
+}
+@media (max-width: 1200px) {
+  .nav-shell {
+    gap: 28px;
+  }
+  .desktop-nav {
+    gap: 23px;
+    font-size: 11px;
+  }
+  .brand > span {
+    font-size: 21px;
+  }
+  .brand img {
+    width: 40px;
+    height: 40px;
+  }
+}
+@media (max-width: 1000px) {
+  .desktop-nav {
+    display: none;
+  }
+  .header-cta {
+    margin-left: auto;
+  }
+  .menu-toggle {
+    display: block;
+  }
+  .nav-shell {
+    height: 82px;
+  }
+}
+@media (max-width: 740px) {
+  .topbar {
+    height: 28px;
+  }
+  .topbar > .container {
+    justify-content: center;
+  }
+  .topbar span {
+    font-size: 8px;
+  }
+  .topbar a {
+    display: none;
+  }
+  .nav-shell {
+    height: 76px;
+    gap: 15px;
+  }
+  .brand > span {
+    font-size: 21px;
+    letter-spacing: 1.6px;
+  }
+  .brand small {
+    font-size: 8px;
+    letter-spacing: 4.5px;
+    margin-top: 7px;
+  }
+  .brand img {
+    width: 37px;
+    height: 37px;
+  }
+  .brand {
+    gap: 9px;
+  }
+  .header-cta {
+    display: none;
+  }
+  .menu-toggle {
+    margin-left: auto;
+    width: 38px;
+    height: 38px;
+    padding: 8px;
+  }
+}

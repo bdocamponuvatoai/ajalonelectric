@@ -1,0 +1,78 @@
+.intro-strip {
+  display: grid;
+  grid-template-columns: 0.7fr 1.5fr 60px;
+  gap: 50px;
+  align-items: center;
+  padding-block: 55px;
+  border-bottom: 1px solid var(--line);
+}
+.intro-strip .eyebrow {
+  font-size: 9px;
+  margin: 0;
+  max-width: 160px;
+}
+.intro-strip p {
+  font-family: var(--font-display);
+  font-size: 28px;
+  line-height: 1.5;
+  font-weight: 500;
+  letter-spacing: -0.6px;
+  margin: 0;
+  color: var(--ink);
+}
+.intro-strip p > span {
+  color: #65776e;
+}
+.circle-link {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  border: 1px solid #b9c3c0;
+  display: grid;
+  place-items: center;
+}
+.circle-link:hover {
+  background: var(--accent);
+}
+@media (max-width: 1000px) {
+  .intro-strip {
+    grid-template-columns: 0.8fr 1.5fr 45px;
+    gap: 30px;
+  }
+  .intro-strip p {
+    font-size: 24px;
+  }
+  .circle-link {
+    width: 45px;
+    height: 45px;
+  }
+  .intro-strip .eyebrow {
+    font-size: 8px;
+  }
+}
+@media (max-width: 740px) {
+  .intro-strip {
+    grid-template-columns: 1fr 45px;
+    gap: 18px;
+    padding-block: 37px;
+  }
+  .intro-strip > .eyebrow {
+    grid-column: 1/-1;
+    max-width: none;
+    font-size: 8px;
+  }
+  .intro-strip > p {
+    font-size: 22px;
+    line-height: 1.45;
+    letter-spacing: -0.5px;
+  }
+  .circle-link {
+    width: 43px;
+    height: 43px;
+  }
+}
+@media (max-width: 380px) {
+  .intro-strip > p {
+    font-size: 20px;
+  }
+}
